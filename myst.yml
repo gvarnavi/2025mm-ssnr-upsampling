@@ -1,0 +1,108 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: gvarnavides-2025mm-ssnr-upsampling
+  title: STEM Phase Retrieval 
+  description: Interactive presentation given at M&M 2025, Salt Lake City, by Georgios Varnavides.
+  keywords:
+    - Electron Microscopy
+    - Diffractive Imaging
+    - Phase Retrieval
+  github: https://github.com/gvarnavi/2025mm-ssnr-upsampling
+  jupyter: true
+  # jupyter:
+  #   server:
+  #     url: 'http://localhost:8888'
+  #     token: '512ac78f14e1141db1fac17e8b4099c1e5bc7d589518b38c'
+  open_access: true
+  license: CC-BY-4.0
+  date: 2025-07-28
+  requirements:
+    - 'Dockerfile'
+    - requirements.txt
+  resources:
+    - 'notebooks/**/*'
+  exports:
+    - format: meca
+  exclude:
+    - README.md
+  authors:
+    - id: gvarnavides
+      name: Georgios Varnavides
+      email: gvarnavides@berkeley.edu
+      orcid: 0000-0001-8338-3323
+      affiliations:
+        - id: miller
+          department: Miller Institute for Basic Research in Science
+          institution: University of California, Berkeley
+          address: 468 Donner Lab, Berkeley, CA, USA, 94720
+          ror: 01an7q238
+      roles:
+        - Conceptualization
+        - Funding acquisition
+        - Project administration
+        - Software
+        - Validation
+        - Visualization
+        - Writing - original draft
+  abbreviations:
+    TEM: transmission electron microscopy
+    HRTEM: high resolution transmission electron microscopy
+    STEM: scanning transmission electron microscopy
+    4D-STEM: four dimensional scanning transmission electron microscopy
+    4DSTEM: four dimensional scanning transmission electron microscopy
+    BF: bright field
+    DF: dark field
+    HAADF: high angle annular dark field
+    FFT: fast Fourier transform
+    PCI: phase contrast imaging
+    tcBF: tilt corrected bright field STEM
+    SSB: single side band
+  toc:
+    - file: 1.index.md
+    - title: Diffractive Imaging Introduction
+      children:
+        - file: 2.stem-measurements.md
+        - file: 3.phase-problem.md
+        - file: 4.example-reconstructions.md
+    - title: Phase Retrieval Methods
+      children:
+        - file: 5.center-of-mass-imaging.md
+        - file: 6.parallax-imaging.md
+        - file: 7.direct-ptychography.md
+        - file: 8.iterative-ptychography.md
+    - title: Transfer of Information
+      children:
+        - file: 9.analytical-ctf-ingredients.md
+        - file: 10.center-of-mass-imaging-ctf.md
+        - file: 11.parallax-ctf.md
+        - file: 12.direct-ptychography-ctf.md
+        - file: 13.iterative-ptychography-ctf.md
+    - title: Scan Upsampling
+      children:
+        - file: 14.upsampled-direct-ptychography.md
+        - file: 15.upsampled-examples.md
+    - title: Statistical Framework
+      children:
+        - file: 16.experimental-ssnr-motivation.md
+        - file: 17.spectral-signal-to-noise.md
+        - file: 18.ssnr-summary-slide.md
+    - title: Conclusions
+      children:
+        - file: 19.elemental-microscopy-delft.md
+        - file: 20.acknowledgments.md
+    - title: Notebooks
+      children:
+        - pattern: notebooks/*.ipynb
+site:
+  template: https://github.com/gvarnavi/custom-myst-book-theme.git
+  options:
+    theme: 'dark'
+    hide_theme_toggle: true
+    hide_outline: true
+    hide_title_block: true
+    hide_search: true
+    favicon: ./figures/favicon.ico
+    logo: ./figures/logo.png
+    logo_dark: ./figures/logo.png
+    logo_text: 'gvarnavides.com/2025mm-ssnr-upsampling'

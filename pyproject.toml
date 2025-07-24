@@ -1,0 +1,18 @@
+[project]
+name = "mm-ssnr-upsampling"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "jupyterlab",
+    "jupyterlab-myst",
+    "ipywidgets",
+    "matplotlib",
+    "ipympl",
+    "colorspacious",
+    "cmasher",
+    "abtem",
+    "ase",
+    "py4DSTEM",
+    "temgymlite @ https://raw.githubusercontent.com/gvarnavi/TemGymLite/main/dist/temgymlite-0.6.0.0-py3-none-any.whl",
+]
+
