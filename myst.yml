@@ -82,6 +82,7 @@ project:
     - title: Scan Upsampling
       children:
         - file: 14.upsampled-direct-ptychography.md
+        - file: 14.zzz_upsampling-limits.md
         - file: 15.upsampled-examples.md
     - title: Statistical Framework
       children:
